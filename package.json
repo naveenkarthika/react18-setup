@@ -5,7 +5,8 @@
     "build": "cross-env ENV=production NODE_ENV=production webpack --mode production --config app/webpack/webpack.prod.js --profile --progress",
     "prepare": "husky install",
     "lint": "eslint --ignore-path .gitignore .",
-    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix"
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
